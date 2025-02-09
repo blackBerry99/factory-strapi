@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blocks_text_images",
+  "info": {
+    "displayName": "TextImage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "ImageFirst": {
+      "type": "boolean"
+    },
+    "bgDark": {
+      "type": "boolean"
+    }
+  }
+}

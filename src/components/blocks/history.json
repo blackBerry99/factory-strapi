@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_histories",
+  "info": {
+    "displayName": "History",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "history_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::history-item.history-item"
+    }
+  }
+}

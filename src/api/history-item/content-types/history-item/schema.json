@@ -29,8 +29,7 @@
     "year": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::year.year",
-      "inversedBy": "history_item"
+      "target": "api::year.year"
     }
   }
 }

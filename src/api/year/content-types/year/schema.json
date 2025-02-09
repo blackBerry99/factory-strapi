@@ -4,7 +4,8 @@
   "info": {
     "singularName": "year",
     "pluralName": "years",
-    "displayName": "year"
+    "displayName": "year",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,12 +14,6 @@
   "attributes": {
     "value": {
       "type": "integer"
-    },
-    "history_item": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::history-item.history-item",
-      "mappedBy": "year"
     }
   }
 }
