@@ -38,6 +38,16 @@ export interface BlocksHistory extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksProjectsListFull extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_projects_list_fulls';
+  info: {
+    displayName: 'ProjectsListFull';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksTextImage extends Struct.ComponentSchema {
   collectionName: 'components_blocks_text_images';
   info: {
@@ -142,6 +152,7 @@ declare module '@strapi/strapi' {
       'blocks.event-slider': BlocksEventSlider;
       'blocks.events-list': BlocksEventsList;
       'blocks.history': BlocksHistory;
+      'blocks.projects-list-full': BlocksProjectsListFull;
       'blocks.text-image': BlocksTextImage;
       'blocks.video': BlocksVideo;
       'shared.media': SharedMedia;
