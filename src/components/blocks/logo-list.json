@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_logo_lists",
+  "info": {
+    "displayName": "Logo List",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_district_lists",
+  "info": {
+    "displayName": "District list"
+  },
+  "options": {},
+  "attributes": {
+    "districts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::district.district"
+    },
+    "title": {
+      "type": "text"
+    }
+  }
+}

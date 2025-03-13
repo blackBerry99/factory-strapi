@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksDistrictList extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_district_lists';
+  info: {
+    displayName: 'District list';
+  };
+  attributes: {
+    districts: Schema.Attribute.Relation<'oneToMany', 'api::district.district'>;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface BlocksEventSlider extends Struct.ComponentSchema {
   collectionName: 'components_blocks_event_sliders';
   info: {
@@ -38,13 +49,18 @@ export interface BlocksHistory extends Struct.ComponentSchema {
   };
 }
 
-export interface BlocksProjectsListFull extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_projects_list_fulls';
+export interface BlocksLogoList extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_logo_lists';
   info: {
-    displayName: 'ProjectsListFull';
+    description: '';
+    displayName: 'Logo List';
   };
   attributes: {
-    title: Schema.Attribute.String;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title: Schema.Attribute.Text;
   };
 }
 
@@ -124,18 +140,6 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedSlider extends Struct.ComponentSchema {
-  collectionName: 'components_shared_sliders';
-  info: {
-    description: '';
-    displayName: 'Slider';
-    icon: 'address-book';
-  };
-  attributes: {
-    files: Schema.Attribute.Media<'images', true>;
-  };
-}
-
 export interface SharedSocial extends Struct.ComponentSchema {
   collectionName: 'components_shared_socials';
   info: {
@@ -149,17 +153,17 @@ export interface SharedSocial extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blocks.district-list': BlocksDistrictList;
       'blocks.event-slider': BlocksEventSlider;
       'blocks.events-list': BlocksEventsList;
       'blocks.history': BlocksHistory;
-      'blocks.projects-list-full': BlocksProjectsListFull;
+      'blocks.logo-list': BlocksLogoList;
       'blocks.text-image': BlocksTextImage;
       'blocks.video': BlocksVideo;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
       'shared.social': SharedSocial;
     }
   }
